@@ -19,6 +19,25 @@ A web-based Hotel Reservation System built using HTML, CSS, JavaScript, and PHP 
 - Database: MySQL
 - Server: XAMPP (Apache)
 
+## 📂 Project Structure
+
+Hotel-Reservation-System/
+│
+├── admin/            # Admin panel
+├── customer/         # Customer pages
+├── css/              # Stylesheets
+├── javascript/       # JavaScript files
+├── image/            # Static assets
+│
+├── index.php         # Entry point
+├── home.php          # Home page
+├── hotel_detail.php  # Hotel details
+├── login.php         # User login
+├── logout.php        # Logout
+├── process_booking.php  # Booking logic
+├── config.php        # Database configuration
+├── momentsawayhotel.sql # Database file
+└── README.md
 
 ## ⚙️ How to Run the Project
 
