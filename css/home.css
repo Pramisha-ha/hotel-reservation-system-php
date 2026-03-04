@@ -1,0 +1,576 @@
+
+:root {
+    --bg-text-shadow: 0 2px 4px rgb(13 0 77 / 8%), 0 3px 6px rgb(13 0 77 / 8%), 0 8px 16px rgb(13 0 77 / 8%);
+    --bg-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.621);
+}
+*::-webkit-scrollbar{
+    width: .4rem;
+}
+*::-webkit-scrollbar-track{
+    background: rgb(6, 6, 44);
+}
+*::-webkit-scrollbar-thumb{
+    background: #0040ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* text-shadow: var(--bg-text-shadow); */
+}
+
+nav{
+    /* position: fixed; */
+    height: 60px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 200;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex: 1;
+    min-width: 0;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+ul li{
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+ul li button {
+    white-space: nowrap;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+ul li:hover::after{
+    content: "";
+    position: absolute;
+    display: flex;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    /* display: none; */
+    transition: ease 2s;
+}
+
+ul li a:hover{
+    color: black;
+}
+
+.logo {
+    height: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    min-width: 0;
+}
+
+.logo .bluebirdlogo {
+    height: 100%;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+    flex-shrink: 0;
+}
+
+.logo p {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: rgb(66, 68, 74);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+    white-space: nowrap;
+    margin: 0;
+}
+
+#firstsection{
+    height: 100vh;
+    background-color: rgba(175, 175, 222, 0.511);
+    width: 100%;
+    /* z-index: 2000; */
+}
+
+#firstsection .carousel-inner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#firstsection .carousel-inner::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(178, 170, 236, 0.533);
+    z-index: 1;
+}
+
+#firstsection .carousel-item{
+    overflow: hidden;
+    position: relative;
+}
+
+#firstsection .carousel-item img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#firstsection .welcomeline{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    pointer-events: none;
+}
+
+#firstsection .welcometag{
+    font-size: 110px;
+    font-weight: bold;
+    font-family: 'Cookie', cursive;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    /* text gradiant */
+    background: -webkit-linear-gradient(317deg, rgba(0, 60, 255, 0.81) 0%, rgb(255 0 123) 70%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+/* secondsection */
+
+#secondsection{
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+#secondsection img{
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    filter: blur(20px);
+    position: absolute;
+    z-index: -2;
+}
+
+.ourroom{
+    position: relative;
+    top: 90px;
+    min-height: auto;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.head{
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.roomselect{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: auto;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.roomselect .roombox{
+     display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 300px;
+    background-color: rgb(8, 8, 48);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.hotelphoto{
+     position: relative;
+    height: 250px;
+    width: 100%;
+    background-color: aquamarine;
+    background-size: cover;
+}
+
+.h1{
+    background-image: url(../image/hotel1photo.webp);
+}
+.h2{
+    background-image: url(../image/hotel2photo.jpg);
+}
+.h3{
+    background-image: url(../image/hotel3photo.avif);
+}
+.h4{
+    background-image: url(../image/hotel4photo.jpg);
+}
+
+.roomdata{
+    text-align: center;
+    padding: 15px;
+}
+
+.roomdata h2{
+color: rgb(207, 211, 255);
+font-size: 30px;
+margin-bottom: 10px;
+}
+
+.rating-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.rating {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.price {
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.hotel-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.hotel-buttons .btn {
+    flex: 1;
+    min-width: 80px;
+    max-width: 150px;
+}
+
+.hotel-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.hotel-buttons .btn {
+    flex: 1;
+    min-width: 80px;
+    max-width: 150px;
+}
+
+.sevices{
+    display: flex;
+}
+
+.services i{
+    color:white;
+    margin: 7px;
+}
+
+.bookbtn{
+   margin: 10px;
+}
+
+/* roombookcss */
+
+#guestdetailpanel{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.558);
+    position: fixed;
+    z-index: 10000;
+}
+
+.logoutbtn{
+    height: 20px;
+    width: 200px;
+    background-color: rgba(216, 19, 19, 0.804);
+}
+
+#thirdsection{
+    min-height: 80vh;
+    width: 100%;
+    padding: 80px 0;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.facility{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.facility .box{
+    height: 300px;
+    min-width: 250px;
+    flex: 1;
+    max-width: 310px;
+    border: 2px solid white;
+    background-color: #0040ff;
+    box-sizing: border-box;
+}
+
+.facility .box h2{
+    text-align: center;
+    position: relative;
+    top: 80%;
+    color: white;
+    background-color: #0000005e;
+}
+
+.box:nth-child(1){
+    background-image: url(../image/swimingpool.jpg);
+    background-size: cover;
+}
+.box:nth-child(2){
+    background-image: url(../image/spa.jpg);
+    background-size: cover;
+}
+.box:nth-child(3){
+    background-image: url(../image/food.jpg);
+    background-size: cover;
+}
+.box:nth-child(4){
+    background-image: url(../image/gym.jpg);
+    background-size: cover;
+}
+.box:nth-child(5){
+    background-image: url(../image/heli.jpg);
+    background-size: cover
+}
+
+#contactus{
+    min-height: 70px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+#contactus .social{
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-shrink: 0;
+}
+
+#contactus i{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#contactus .createdby{
+    color: white;
+    flex-shrink: 0;
+}
+
+@media(max-width: 768px){
+    #contactus{
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    #contactus .social{
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* responsive stuff */
+
+@media(max-width: 768px){
+    nav{
+        padding: 0px 10px;
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 60px;
+    }
+    
+    .logo p {
+        font-size: 18px;
+    }
+    
+    .logo .bluebirdlogo {
+        height: 40px;
+    }
+    
+    nav ul{
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    nav ul li {
+        font-size: 12px;
+    }
+    
+    nav ul li a {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+    
+    nav ul li button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 30rem){
+    nav{
+        justify-content: center;
+        position: relative;
+        background-color: #96a8f88c;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #firstsection{
+        height: 50vh;
+        text-align: center;
+    }
+    #firstsection .carousel-inner{
+        height: 50vh;
+    }
+    #firstsection .carousel-inner::after{
+        height: 50vh;
+    }
+    #firstsection .carousel-item img{
+        height: 50vh;
+    }
+    #firstsection .welcomeline{
+        height: 50vh;
+        
+    }
+    #firstsection .welcometag{
+        text-align: center;
+        font-size: 40px;
+        line-height: 1.2;
+        padding: 15px;
+    }
+    #secondsection{
+        min-height: auto;
+        padding-bottom: 30px;
+    }
+    #secondsection img{
+        display: none;
+    }
+    .ourroom{
+        top: 30px;
+        height: auto;
+    }
+    .roomselect{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .roomselect .roombox{
+        width: 75%;
+    }
+
+
+    #thirdsection{
+        min-height: auto;
+        padding: 40px 10px;
+    }
+    .facility{
+        height: auto;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 0 10px;
+    }
+    .facility .box{
+        margin: 0;
+        padding: 0;
+        height: 200px;
+        width: 100%;
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .facility .box h2{
+        font-size: 18px;
+        flex-wrap: wrap;
+    }
+    
+    .box:nth-child(5){
+        display: none;
+    }
+
+    #contactus{
+        padding: 0 30px;
+    }
+}

@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Cookie&family=Poppins:wght@600&display=swap');
+
+:root {
+    --bg-text-shadow: 0 2px 4px rgb(13 0 77 / 8%), 0 3px 6px rgb(13 0 77 / 8%), 0 8px 16px rgb(13 0 77 / 8%);
+    --bg-box-shadow: 0px 0px 20px 6px rgb(0 0 0 / 34%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* text-shadow: var(--bg-text-shadow); */
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../image/hotel1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+    z-index: 0;
+}
+
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* login css */
+
+.logo {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.925);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    margin:20px 0;
+}
+
+.logo .bluebirdlogo {
+    height: 100%;
+}
+
+.logo p {
+    
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: rgb(66, 68, 74);
+    text-shadow: var(--bg-text-shadow);
+    margin: 0;
+}
+
+.auth_container {
+    height: auto;
+    margin: 50px;
+    max-width: 500px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+#Log_in {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.role_btn {
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.role_btn .btns {
+    height: 40px;
+    width: 200px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgba(93, 102, 116, 0.318);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.role_btn .btns:hover{
+    background-image: linear-gradient(90deg, rgba(76, 185, 236, 0.527), rgba(0, 30, 255, 0.456));
+    transition: ease-in-out;
+    color: white;
+}
+
+.btns.active{
+    background-image: linear-gradient(90deg, rgba(76, 185, 236, 0.527), rgba(0, 30, 255, 0.456));
+    color: white;
+}
+
+.authsection {
+    width: 100%;
+    margin: 10px 0;
+    display: none;
+    text-align: center;
+    animation: screen_animation .4s;
+}
+/* toggle display */
+.user_login.active{
+    display: block;
+}
+
+.employee_login.active{
+    display: block;
+}
+
+.form-floating {
+    margin: 15px 0;
+} 
+
+.auth_btn {
+    padding: 15px 30px;
+    border: unset;
+    border-radius: 15px;
+    background-color: rgba(118, 141, 176, 0.318);
+    z-index: 1;
+    position: relative;
+    font-size: 17px;
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+.auth_btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    z-index: -1;
+    border-radius: 10px;
+    background-image: linear-gradient(90deg, rgba(76, 185, 236, 0.527), rgba(0, 30, 255, 0.456));
+    transition: all 250ms
+}
+
+.auth_btn:hover {
+    color: #ffffff;
+}
+
+.auth_btn:hover::before {
+    width: 100%;
+}
+
+.footer_line{
+    margin: 20px 0;
+}
+
+.page_move_btn{
+    color: rgba(0, 0, 255, 0.599);
+    cursor: pointer;
+}
+.page_move_btn:hover{
+    color: blue;
+}
+
+/* signup */
+#sign_up{
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user_signup{
+    width: 100%;
+    text-align: center;
+    animation: screen_animation .4s;
+}
+
+/* animation frame */
+@keyframes screen_animation {
+    0%{
+        transform: translateX(50px);
+    }
+}
+
+
+
+/* responsive stuff */
+
+@media(max-width: 768px){
+    body {
+        padding: 20px;
+    }
+    
+    #auth_section{
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .auth_container {
+        width: 100%;
+        padding: 30px 20px;
+        margin: 20px;
+        max-width: 100%;
+    }
+    
+    #Log_in .role_btn .btns{
+        width: 120px;
+        font-size: 14px;
+    }
+    
+    .logo p {
+        font-size: 24px;
+    }
+}
+
+@media(max-width: 30rem){
+    .auth_container {
+        margin: 10px;
+        padding: 20px 15px;
+    }
+    
+    #Log_in .role_btn .btns{
+        width: 90px;
+        font-size: 12px;
+    }
+    
+    .logo p {
+        
+        font-size: 20px;
+    }
+}
