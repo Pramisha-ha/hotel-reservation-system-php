@@ -45,6 +45,23 @@ Hotel-Management-System/
 This project was built as a semester project for BCA and demonstrates CRUD operations, backend integration, and database handling using core PHP.
 
 
+## 📸 Screenshots
+
+### Home Page
+![Home Page](home.png)
+
+### Login Page
+![Login Page](login.png)
+
+### Admin Dashboard
+![Dashboard](dashboard.png)
+
+### Booking Page
+![Booking](booking.png)
+
+### Hotels Page
+![Hotels Page](hotels.png)
+
 ## 👩‍💻 Author
 
 Pramisha  
