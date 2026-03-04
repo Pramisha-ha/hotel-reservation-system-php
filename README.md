@@ -23,28 +23,17 @@ A web-based Hotel Reservation System built using HTML, CSS, JavaScript, and PHP 
 
 Hotel-Reservation-System/
 │
-├── admin/                  # Admin panel files
-├── customer/               # Customer related pages
-├── css/                    # Stylesheets
-├── javascript/             # JavaScript files
-├── image/                  # Project images/assets
+├── admin/            # Admin panel
+├── customer/         # Customer related pages
+├── css/              # Stylesheets
+├── javascript/       # JavaScript files
+├── image/            # Static assets
 │
-├── index.php               # Main landing page
-├── home.php                # Home page
-├── hotel_detail.php        # Hotel details page
-├── process_booking.php     # Booking logic processing
-├── login.php               # User login
-├── logout.php              # Logout functionality
-├── config.php              # Database configuration
-│
-├── momentsawayhotel.sql    # Database file
-│
-├── home.png                # Screenshot - Home Page
-├── booking.png             # Screenshot - Booking Page
-├── dashboard.png           # Screenshot - Dashboard
-├── hotels.png              # Screenshot - Hotels Page
-│
-└── README.md               # Project documentation
+├── index.php         # Entry point
+├── config.php        # Database configuration
+├── process_booking.php  # Booking logic
+├── momentsawayhotel.sql # Database file
+└── README.md
 
 ## ⚙️ How to Run the Project
 
